@@ -1,4 +1,4 @@
-FROM postgres:13
+FROM postgres:15
 
 # Variables d'environnement pour la configuration de Postgres
 ENV POSTGRES_DB=tsundoku_postgres
