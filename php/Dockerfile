@@ -9,9 +9,12 @@ RUN apt-get update && apt-get install -y \
     unzip \
     dnsutils \
     libz-dev \
+    libssl-dev \
     && pecl install redis \
     && docker-php-ext-enable redis \
     && docker-php-ext-install pdo pdo_pgsql \
+    && pecl install mongodb \
+    && docker-php-ext-enable mongodb \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
