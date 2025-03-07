@@ -10,8 +10,6 @@ RUN npm install -g nodemon
 
 COPY frontend .
 
-RUN npm run build
-
 EXPOSE 3000
 
 CMD ["nodemon", "-L", "--watch", ".", "--exec", "npm", "run", "dev"]
